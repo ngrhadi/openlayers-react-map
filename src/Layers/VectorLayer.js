@@ -5,6 +5,7 @@ import OLVectorLayer from "ol/layer/Vector";
 const VectorLayer = ({ source, style, zIndex = 0 }) => {
 	const { map } = useContext(MapContext);
 
+	// call data point from backend
 	useEffect(() => {
 		if (!map) return;
 
@@ -18,7 +19,7 @@ const VectorLayer = ({ source, style, zIndex = 0 }) => {
 
 		return () => {
 			if (map) {
-				map.removeLayer(vectorLayer);
+				map.removeLayer(vectorLayer); 
 			}
 		};
 	}, [map]);

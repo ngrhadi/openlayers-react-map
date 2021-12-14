@@ -42,7 +42,7 @@ const Map = ({ children, zoom, center }) => {
 			<div ref={mapRef} className="ol-map">
 				{children}
 			</div>
-		</MapContext.Provider>
+		</MapContext.Provider> 
 	)
 }
 
